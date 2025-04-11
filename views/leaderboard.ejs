@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🏆 Leaderboard</h1>
+      <% if (topUsers.length === 0) { %>
+      <p>No players yet!</p>
+      <% } else { %>
+      <ol>
+        <% topUsers.forEach((user, index) => { %>
+        <li>
+          <strong><%= user.username %></strong> - Level: <%= user.level %>,
+          Time: <%= user.timeTaken %>s
+        </li>
+        <% }) %>
+      </ol>
+      <% } %>
+      <a href="/">⬅ Back to Game</a>
+    </div>
+  </body>
+</html>

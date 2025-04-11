@@ -1,0 +1,120 @@
+[
+  {
+    "question": "What has to be broken before you can use it?",
+    "answer": "Egg",
+    "hints": [
+      "You often find it in a carton at the grocery store.",
+      "It's a staple in many breakfast dishes."
+    ]
+  },
+  {
+    "question": "I'm tall when I'm young, and I'm short when I'm old. What am I?",
+    "answer": "Candle",
+    "hints": ["You might put it on a birthday cake.", "It melts as it works."]
+  },
+  {
+    "question": "What month of the year has 28 days?",
+    "answer": "All of them",
+    "hints": ["Trick question!", "Every month passes through the 28th."]
+  },
+  {
+    "question": "What is full of holes but still holds water?",
+    "answer": "Sponge",
+    "hints": ["Found near sinks or bathtubs.", "Absorbs liquid easily."]
+  },
+  {
+    "question": "What question can you never answer 'yes' to?",
+    "answer": "Are you asleep?",
+    "hints": [
+      "Think about what you do at night.",
+      "If you answer, you aren't actually doing it."
+    ]
+  },
+  {
+    "question": "What is always in front of you but can’t be seen?",
+    "answer": "The future",
+    "hints": ["It hasn't happened yet.", "It comes after the present."]
+  },
+  {
+    "question": "There’s a one-story house in which everything is yellow. What color are the stairs?",
+    "answer": "No stairs",
+    "hints": ["It's only one floor.", "No going up or down."]
+  },
+  {
+    "question": "What can you keep after giving it to someone?",
+    "answer": "Your word",
+    "hints": ["It's about promises.", "A phrase about honesty."]
+  },
+  {
+    "question": "I shave every day, but my beard stays the same. What am I?",
+    "answer": "Barber",
+    "hints": [
+      "Profession that uses razors.",
+      "Works on other people's hair or beard."
+    ]
+  },
+  {
+    "question": "You walk into a room that contains a match, a kerosene lamp, a candle and a fireplace. Which do you light first?",
+    "answer": "The match",
+    "hints": [
+      "You need a fire source before lighting anything else.",
+      "Small wooden stick with a flammable tip."
+    ]
+  },
+  {
+    "question": "I am an odd number. Take away one letter and I become even. What number am I?",
+    "answer": "Seven",
+    "hints": [
+      "Think 'S-E-V-E-N'. Remove 'S' becomes 'EVEN'.",
+      "Numbers spelled out."
+    ]
+  },
+  {
+    "question": "If two’s company, and three’s a crowd, what are four and five?",
+    "answer": "Nine",
+    "hints": ["Adding the two numbers together", "4 + 5 = 9"]
+  },
+  {
+    "question": "What begins with T, finishes with T, and has T in it?",
+    "answer": "Teapot",
+    "hints": ["A kitchen item used for brewing.", "It holds a warm beverage."]
+  },
+  {
+    "question": "What gets bigger the more you take away?",
+    "answer": "A hole",
+    "hints": ["Think 'digging'.", "It expands as you remove material."]
+  },
+  {
+    "question": "What can run but never walks, has a mouth but never talks, has a head but never weeps, has a bed but never sleeps?",
+    "answer": "A river",
+    "hints": [
+      "Geographical feature with a flowing current.",
+      "Often leads to a larger body of water."
+    ]
+  },
+  {
+    "question": "Where does today come before yesterday?",
+    "answer": "The dictionary",
+    "hints": ["An alphabetical arrangement.", "It's a reference book."]
+  },
+  {
+    "question": "What kind of band never plays music?",
+    "answer": "A rubber band",
+    "hints": ["It's stretchy.", "Often used to hold things together."]
+  },
+  {
+    "question": "What has one eye but can’t see?",
+    "answer": "A needle",
+    "hints": ["Used in sewing.", "Has a hole called an eye."]
+  },
+  {
+    "question": "What has many keys but can't open a single lock?",
+    "answer": "A piano",
+    "hints": ["Produces beautiful music.", "88 of them typically."]
+  },
+  {
+    "question": "What goes up but never comes down?",
+    "answer": "Your age",
+    "hints": ["It's measured in years.", "Time's arrow moves forward."]
+  }
+]

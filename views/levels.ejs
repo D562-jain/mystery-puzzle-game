@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Choose a Level</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <h1>🎯 Choose a Puzzle</h1>
+
+    <ul>
+      <% levels.forEach(level => { %>
+      <li>
+        <a href="/level/<%= level.number %>"
+          >Level <%= level.number %>: <%= level.title %></a
+        >
+      </li>
+      <% }) %>
+    </ul>
+    <a href="/">⬅ Back to Game</a>
+  </body>
+</html>

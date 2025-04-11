@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>🎉 Congrats!</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <h1>🎉 Congratulations, <%= username %>!</h1>
+    <p>You’ve completed all the puzzles. Amazing job!</p>
+    <a href="/levels">📖 Replay Levels</a>
+    <form action="/restart" method="POST">
+      <button>🔁 Restart Game</button>
+    </form>
+    <a href="/logout">🔓 Logout</a>
+  </body>
+</html>

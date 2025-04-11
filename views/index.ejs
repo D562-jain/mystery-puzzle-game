@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mystery Puzzle - Level <%= level + 1 %></title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Dark Mode Toggle -->
+    <button class="toggle-btn" onclick="toggleDarkMode()">
+      Toggle Dark Mode
+    </button>
+
+    <!-- User info & nav (top-left) -->
+    <div class="navbar">
+      <p>Hello, <strong><%= username %></strong>!</p>
+      <a href="/leaderboard">🏆 Leaderboard</a>
+
+      <a href="/logout">🔓 Logout</a>
+      <a href="/levels">📖 Choose Level</a>
+    </div>
+
+    <div class="container">
+      <h1>Mystery Puzzle - Level <%= level + 1 %></h1>
+      <p><%= puzzle.question %></p>
+      <h3 id="timer" style="color: #ff6f61; font-weight: bold">
+        Time left: 60s
+      </h3>
+
+      <h2>Puzzle Level <%= level + 1 %> of <%= total %></h2>
+
+      <!-- Progress bar container -->
+      <div
+        id="progressContainer"
+        data-level="<%= level %>"
+        data-total="<%= total %>"
+      >
+        <div id="progressBar"></div>
+      </div>
+
+      <form id="puzzleForm">
+        <input
+          type="text"
+          name="answer"
+          id="answer"
+          placeholder="Enter your answer"
+          required
+        />
+        <button type="submit">Submit</button>
+      </form>
+
+      <form action="/restart" method="POST">
+        <button type="submit">🔄 Restart Game</button>
+      </form>
+
+      <button onclick="getHint()">💡 Need a hint?</button>
+      <div id="hintBox"></div>
+
+      <div id="feedback"></div>
+    </div>
+
+    <script src="/js/puzzles.js"></script>
+    <script>
+      let timeLeft = 60;
+      const timerDisplay = document.getElementById("timer");
+      const countdown = setInterval(() => {
+        timeLeft--;
+        if (timerDisplay) {
+          timerDisplay.textContent = `Time left: ${timeLeft}s`;
+        }
+        if (timeLeft <= 0) {
+          clearInterval(countdown);
+          if (timerDisplay) timerDisplay.textContent = "⏰ Time's up!";
+        }
+      }, 1000);
+    </script>
+    <audio id="success-sound" src="/sounds/success.mp3" preload="auto"></audio>
+
+    <script>
+      document
+        .getElementById("puzzleForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // prevent form refresh
+
+          const answerInput = document.getElementById("answer");
+          const answer = answerInput.value.trim().toLowerCase();
+          const correctAnswer = "<%= puzzle.answer.toLowerCase() %>"; // server-rendered answer
+          const feedback = document.getElementById("feedback");
+
+          if (answer === correctAnswer) {
+            feedback.textContent = "✅ Correct! 🎉";
+            feedback.style.color = "green";
+
+            // 🎉 Confetti animation
+            confetti({
+              particleCount: 150,
+              spread: 70,
+              origin: { y: 0.6 },
+            });
+
+            // 🔊 Play success sound
+            document
+              .getElementById("success-sound")
+              .play()
+              .catch((err) => {
+                console.error("Sound play error:", err);
+              });
+
+            // Optionally, redirect or unlock next level here
+          } else {
+            feedback.textContent = "❌ Incorrect. Try again!";
+            feedback.style.color = "red";
+          }
+
+          answerInput.value = "";
+        });
+      const sound = document.getElementById("success-sound");
+      sound.volume = 1.0; // max volume
+      sound.play().catch((err) => {
+        console.error("Sound play error:", err);
+      });
+    </script>
+  </body>
+</html>
