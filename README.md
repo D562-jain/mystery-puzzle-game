@@ -34,4 +34,5 @@ Session Storage
 Vanilla CSS
 
 🤖 AI Hint Engine
+
 An intelligent basic NLP system gives players smart hints based on the current puzzle. Configurable and extendable!
